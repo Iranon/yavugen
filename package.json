@@ -1,6 +1,6 @@
 {
   "name": "yavugen",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "CLI components generator for Vue",
   "main": "index.ts",
   "bin": {

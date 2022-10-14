@@ -13,7 +13,10 @@ let flags: string[] = process.argv.slice(3).filter(flag => /^[-][a-zA-Z]$/.test(
 //-------------
 (async () => {
     //if the help flag is called print help and exit
-    if (flags.includes('-h')) { console.log(helpMessage); process.exit(0); };
+    if (flags.includes('-h') || /^[-][hH]$/.test(process.argv[2])) {
+        console.log(helpMessage);
+        process.exit(0);
+    };
     
     if (inputPath) {
         await generateComponent(
